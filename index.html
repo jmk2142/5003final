@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.0/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Opt to Adopt</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <!-- Navigation Bar -->
+  <div>
+    <nav class="navbar navbar-default"  role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">ABOUT</a>  </li>
+                <li> <a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#getInvolved">GET INVOLVED</a></li>
+            </ul>
+        </div>
+    </nav>
+  </div>
+  <!-- MAIN -->
+  <!-- Intro -->
+  <!-- <div id="fullpage"> -->
+  <div class="intro container">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate architecto explicabo, sed, maiores nostrum reiciendis, eos tempora delectus illo voluptates quae! Reiciendis maiores magnam doloribus sequi aliquam eveniet ipsa tenetur!
+    </p>
+  </div>
+
+  <!-- Video -->
+  <div id="about" class="container">
+      <div class="row">
+        <div class="video col-md-8 col-centered">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/TIE_2NKFhAk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Info Text -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-centered">
+        <h2>Text</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, deserunt. Incidunt praesentium impedit autem reprehenderit, ea, dolorum libero velit aspernatur. Nostrum alias tenetur laborum eveniet libero, ea amet saepe voluptatum.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="container" id="testimonials">
+    <div class="row">
+      <h2>Testimonials</h2>
+      <div class="col-md-3 col-centered">
+        <button id="dog1Btn">
+          <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/Toast-9794_HD_flat_RGB_01SIMPLE.jpg" alt="Toast" title="Toast">
+        </button>
+      </div>
+      <div class="col-md-3 col-centered">
+        <button id="dog2Btn">
+          <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/formidable/12/Scooter-618x618.jpg" alt="Scooter" title="Scooter">
+        </button>
+      </div>
+      <div class="col-md-3 col-centered">
+        <button  id="dog3Btn">
+          <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/image-6-618x618.jpg" alt="O'Keefe" title="O'Keefe">
+        </button>
+      </div>
+      <div class="col-md-3 col-centered">
+        <button  id="dog4Btn">
+          <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/P1010113_0001-2-618x464.jpg" alt="Shasta" title="Shasta">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container dogInfo">
+    <div class="row">
+      <div id="fullStory" class="col-md-12 col-centered">
+
+        <template id="dogTemplate">
+            <h3 class="dogName">Dog Name here</h3>
+            <img class="dogUrl">
+            <p> Adopted by: <span class="humanName">Adopter name here</span></p>
+            <p> Shelter: <span class="shelterName"> Shelter here</span> </p>
+            <p class="story">Story here</p>
+        </template>
+
+        <button id="submitBtn">Share My Story</button>
+
+      </div>
+    </div>
+  </div>
+  <!-- Share -->
+  <div class="container" id="getInvolved">
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li><a href="http://bestfriends.org/" target="_blank">Learn More</a></li>
+          <li><a href="https://secure2.convio.net/bfas/site/Donation2;jsessionid=00000000.app232a?df_id=1780&mfc_pref=T&1780.donation=form1&NONCE_TOKEN=EC4A476A751FEE3E4A6FD966848C5637" target="_blank">Donate</a></li>
+          <li><a href="http://bestfriends.org/sanctuary/volunteer/volunteer-near-you" target="_blank">Volunteer</a></li>
+          <li><a href="http://bestfriends.org/adopt" target="_blank">Adopt</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.0/jquery.fullPage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
