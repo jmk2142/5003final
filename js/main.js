@@ -37,10 +37,11 @@ var dogStories = [
     story:"Shasta was at a Shasta County shelter for 3 weeks and her time was up - she was scheduled for euthanasia the next day. She was a shelter favorite, so they networked her like crazy! Finally a rescue agreed to take her in, and we met her the next day at a boarding facility. She was the most beautiful dog, and so very calm and sweet. We agreed to adopt her, and we couldnt be happier. She is truly the best -behaved dog ever, and we were SO lucky to find her. I just cant imagine my life with without her!"
   },
 ];
+printDogStory(dogStories);
 
-document.getElementById('dog1Btn').addEventListener('click', function(event){
-  printDogStory(dogStories);
-});
+// document.getElementById('dog1Btn').addEventListener('click', function(event){
+//   printDogStory(dogStories);
+// });
 
 function printDogStory(dogInfo){
   for (var i = 0; i < dogInfo.length; i++) {
@@ -54,7 +55,27 @@ function printDogStory(dogInfo){
     template.content.querySelector('.shelterName').innerHTML = dog.shelterName;
     template.content.querySelector('.story').innerHTML = dog.story;
 
+    template.content.querySelector('.dogStory').dataset.dogid = dogInfo[i].id;
+    console.log(template.content.querySelector('.dogStory').dataset);
+
     var clone = document.importNode(template.content, true);
     document.querySelector('.dogInfo').appendChild(clone);
   }
 }
+
+var dogBtns = document.querySelectorAll('#testimonials button');
+
+dogBtns.forEach(function(btn){
+  btn.addEventListener('click', function(event){
+    var selectedDog = btn.dataset.dogid;
+    var selectedStory = document.querySelector('.dogStory[data-dogid="' + selectedDog + '"]');
+
+    document.querySelectorAll('.dogStory').forEach(function(el){
+      el.classList.remove('shown');
+    });
+    
+    selectedStory.classList.add('shown');
+
+    console.log(selectedStory);
+  });
+});

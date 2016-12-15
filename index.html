@@ -62,22 +62,22 @@
     <div class="row">
       <h2>Testimonials</h2>
       <div class="col-md-3 col-centered">
-        <button id="dog1Btn">
+        <button id="dog1Btn" data-dogid="dog1">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/Toast-9794_HD_flat_RGB_01SIMPLE.jpg" alt="Toast" title="Toast">
         </button>
       </div>
       <div class="col-md-3 col-centered">
-        <button id="dog2Btn">
+        <button id="dog2Btn" data-dogid="dog2">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/formidable/12/Scooter-618x618.jpg" alt="Scooter" title="Scooter">
         </button>
       </div>
       <div class="col-md-3 col-centered">
-        <button  id="dog3Btn">
+        <button  id="dog3Btn" data-dogid="dog3">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/image-6-618x618.jpg" alt="O'Keefe" title="O'Keefe">
         </button>
       </div>
       <div class="col-md-3 col-centered">
-        <button  id="dog4Btn">
+        <button  id="dog4Btn" data-dogid="dog4">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/P1010113_0001-2-618x464.jpg" alt="Shasta" title="Shasta">
         </button>
       </div>
@@ -89,11 +89,14 @@
       <div id="fullStory" class="col-md-12 col-centered">
 
         <template id="dogTemplate">
+          <div class="dogStory">
             <h3 class="dogName">Dog Name here</h3>
             <img class="dogUrl">
             <p> Adopted by: <span class="humanName">Adopter name here</span></p>
             <p> Shelter: <span class="shelterName"> Shelter here</span> </p>
             <p class="story">Story here</p>
+          </div>
+
         </template>
 
         <button id="submitBtn">Share My Story</button>

@@ -7,3 +7,11 @@
 #getInvolved li{
   display: inline;
 }
+
+
+.dogStory {
+  display: none;
+}
+.dogStory.shown {
+  display: block;
+}
