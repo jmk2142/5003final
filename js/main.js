@@ -43,13 +43,14 @@ printDogStory(dogStories);
 //   printDogStory(dogStories);
 // });
 
+// Print all Testimonials
+
 function printDogStory(dogInfo){
   for (var i = 0; i < dogInfo.length; i++) {
     var dog = dogInfo[i];
 
     var template = document.querySelector("#dogTemplate");
 
-    template.content.querySelector('.dogUrl').innerHTML = dog.url;
     template.content.querySelector('.dogName').innerHTML = dog.dogName;
     template.content.querySelector('.humanName').innerHTML = dog.humanName;
     template.content.querySelector('.shelterName').innerHTML = dog.shelterName;
@@ -63,6 +64,7 @@ function printDogStory(dogInfo){
   }
 }
 
+// Show only testimonial that was clicked, hide others
 var dogBtns = document.querySelectorAll('#testimonials button');
 
 dogBtns.forEach(function(btn){
@@ -73,9 +75,36 @@ dogBtns.forEach(function(btn){
     document.querySelectorAll('.dogStory').forEach(function(el){
       el.classList.remove('shown');
     });
-    
     selectedStory.classList.add('shown');
 
     console.log(selectedStory);
   });
+});
+
+// Highlight img of selected dog
+var dogImg = document.querySelectorAll('#testimonials img');
+
+dogImg.forEach(function(btn){
+  btn.addEventListener('click', function(event){
+    dogImg.forEach(function(el){
+      el.classList.remove('dogClicked');
+    });
+    btn.classList.add('dogClicked');
+  });
+});
+
+// Form to submit own testimonial
+var userMsg;
+var messageList = [];
+
+document.getElementById('submitBtn').addEventListener('click', function(){
+  userMsg = document.getElementById('userTestimonial').value;
+  messageList.push(userMsg);
+
+  document.getElementById('userTestimonial').value = "";
+
+  var node = document.createElement('p');
+  var textnode = document.createTextNode(userMsg);
+  node.appendChild(textnode);
+  document.getElementById("testimonialLog").appendChild(node);
 });

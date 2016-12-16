@@ -13,9 +13,12 @@
 
 <body>
     <!-- HEADER -->
+    <div class="jumbotron">
+      <h1>Opt to Adopt</h1>
+    </div>
     <!-- Navigation Bar -->
   <div>
-    <nav class="navbar navbar-default"  role="navigation">
+    <nav class="navbar" role="navigation">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li><a href="#about">ABOUT</a>  </li>
@@ -48,7 +51,7 @@
   <!-- Info Text -->
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-centered">
+      <div class="col-md-8">
         <h2>Text</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, deserunt. Incidunt praesentium impedit autem reprehenderit, ea, dolorum libero velit aspernatur. Nostrum alias tenetur laborum eveniet libero, ea amet saepe voluptatum.
@@ -61,22 +64,22 @@
   <div class="container" id="testimonials">
     <div class="row">
       <h2>Testimonials</h2>
-      <div class="col-md-3 col-centered">
+      <div class="col-md-3">
         <button id="dog1Btn" data-dogid="dog1">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/Toast-9794_HD_flat_RGB_01SIMPLE.jpg" alt="Toast" title="Toast">
         </button>
       </div>
-      <div class="col-md-3 col-centered">
+      <div class="col-md-3">
         <button id="dog2Btn" data-dogid="dog2">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/formidable/12/Scooter-618x618.jpg" alt="Scooter" title="Scooter">
         </button>
       </div>
-      <div class="col-md-3 col-centered">
+      <div class="col-md-3">
         <button  id="dog3Btn" data-dogid="dog3">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/image-6-618x618.jpg" alt="O'Keefe" title="O'Keefe">
         </button>
       </div>
-      <div class="col-md-3 col-centered">
+      <div class="col-md-3">
         <button  id="dog4Btn" data-dogid="dog4">
           <img class="dogphoto" src="http://theshelterpetproject.org/wp-content/uploads/P1010113_0001-2-618x464.jpg" alt="Shasta" title="Shasta">
         </button>
@@ -87,24 +90,47 @@
   <div class="container dogInfo">
     <div class="row">
       <div id="fullStory" class="col-md-12 col-centered">
-
         <template id="dogTemplate">
           <div class="dogStory">
             <h3 class="dogName">Dog Name here</h3>
-            <img class="dogUrl">
             <p> Adopted by: <span class="humanName">Adopter name here</span></p>
             <p> Shelter: <span class="shelterName"> Shelter here</span> </p>
             <p class="story">Story here</p>
           </div>
-
         </template>
-
-        <button id="submitBtn">Share My Story</button>
-
       </div>
     </div>
   </div>
-  <!-- Share -->
+
+<!-- User-Submitted Testimonial -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="testimonialLog">
+      </div>
+    </div>
+  </div>
+  
+<!-- Testimonial Form -->
+  <div class="container" id="testimonialForm">
+    <div class="row">
+      <div class="col-md-12">
+        <p id="testimonialPrompt">
+          Did you adopt your best friend? Share your story with us below!
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <textarea name="" id="userTestimonial" cols="106" rows="7">
+        </textarea>
+        <button id="submitBtn">Share My Story!</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Next Steps -->
   <div class="container" id="getInvolved">
     <div class="row">
       <div class="col-md-8">

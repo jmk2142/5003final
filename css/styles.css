@@ -1,4 +1,26 @@
-.dogphoto{
+body{
+  font-family: Helvetica, sans-serif;
+  font-size: medium;
+  line-height: 1.6em;
+}
+
+.intro{
+  text-align: center;
+  font-size: 150%;
+  color: indigo;
+  padding: 40px;
+}
+
+nav{
+  background-color: white;
+}
+
+.col-centered{
+  float: none;
+  margin: auto;
+}
+
+.dogphoto {
   width: 250px;
   height: 250px;
   object-fit: contain;
@@ -8,10 +30,48 @@
   display: inline;
 }
 
-
 .dogStory {
   display: none;
 }
+
 .dogStory.shown {
   display: block;
+}
+
+#testimonials button {
+  background-color: transparent;
+  border: transparent;
+  padding: 5px;
+}
+
+.dogphoto.dogClicked {
+  border: 4px solid #ffcd8f;
+}
+
+#testimonialForm{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+#testimonialPrompt{
+  font-size: 130%;
+}
+
+#testimonialLog{
+  margin-top: 50px;
+}
+
+button {
+  background-color: #ffcd8f;
+  color: black;
+  border: transparent;
+}
+
+#getInvolved ul{
+  text-align: center;
+}
+
+#getInvolved li{
+  padding: 30px;
+  font-size: 150%;
 }
