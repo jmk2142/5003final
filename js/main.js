@@ -94,17 +94,63 @@ dogImg.forEach(function(btn){
 });
 
 // Form to submit own testimonial
-var userMsg;
-var messageList = [];
+// var userMsg;
+// var messageList = [];
 
 document.getElementById('submitBtn').addEventListener('click', function(){
-  userMsg = document.getElementById('userTestimonial').value;
-  messageList.push(userMsg);
 
-  document.getElementById('userTestimonial').value = "";
+	var userDogStory = {
+		id: "",
+		dogName: "",
+		humanName: "",
+		shelterName: "",
+		url: "",
+		story: ""
+	};
 
-  var node = document.createElement('p');
-  var textnode = document.createTextNode(userMsg);
-  node.appendChild(textnode);
-  document.getElementById("testimonialLog").appendChild(node);
+	userDogStory.story = document.getElementById('userTestimonial').value;
+	userDogStory.dogName = document.getElementById('userDogName').value;
+	userDogStory.dogName = document.getElementById('userImage').value;
+
+	userDogStory.id = "dog" + (dogStories.length + 1);
+
+  dogStories.push(userDogStory);
+
+	var dogImg = document.createElement('img');
+	dogImg.src = userDogStory.url;
+
+
+
+
+
+
+
+
+
+	//
+  // document.getElementById('userTestimonial').value = "";
+	//
+  // var node = document.createElement('p');
+  // var textnode = document.createTextNode(userMsg);
+  // node.appendChild(textnode);
+  // document.getElementById("testimonialLog").appendChild(node);
+});
+
+
+/*
+{
+	id: "dog1",
+	dogName: "Toast",
+	humanName: "Katie Sturino",
+	shelterName: "Dog Habitat Rescue",
+	url:"http://theshelterpetproject.org/wp-content/uploads/Toast-9794_HD_flat_RGB_01SIMPLE.jpg",
+	story:"Toast is a total diva..."
+}
+*/
+
+// Event Delegation
+document.querySelector('#jinDemo').addEventListener('click', function(event) {
+	if (event.target.id === "b") {
+		alert('yay!')
+	}
 });
